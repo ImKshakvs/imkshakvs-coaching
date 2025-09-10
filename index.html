@@ -12,7 +12,7 @@
   <meta property="og:title" content="Coaching VALORANT – Migliora il tuo gameplay | ImKshakvs" />
   <meta property="og:description" content="Sessioni 1:1, pacchetti per team, analisi demo e piani personalizzati." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://REPLACE_WITH_YOUR_DOMAIN/og-image.jpg" />
+  <meta property="og:image" content="https://coaching-imkshakvs.netlify.app/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='58' font-size='58' text-anchor='middle' fill='%23ff4655'>V</text></svg>">
@@ -57,7 +57,7 @@
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
     "name": "ImKshakvs Coaching",
-    "url": "https://REPLACE_WITH_YOUR_DOMAIN/",
+    "url": "https://coaching-imkshakvs.netlify.app/",
     "description": "Coaching VALORANT: sessioni 1:1, pacchetti per team, analisi VOD e piani personalizzati.",
     "telephone": "",
     "email": "imkshakvscoaching@gmail.com"
@@ -236,7 +236,11 @@
           <p class="small">Scegli il pacchetto, lascia i tuoi contatti e ti scrivo per confermare data e ora.</p>
 
           <!-- FORM: sostituisci FORM_ENDPOINT con il tuo endpoint Formspree o Netlify -->
-          <form id="bookingForm" method="POST" action="FORM_ENDPOINT">
+          <form name="bookingForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="bookingForm" />
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
             <label for="name">Nome</label>
             <input id="name" name="name" type="text" placeholder="Il tuo nome" required />
 
